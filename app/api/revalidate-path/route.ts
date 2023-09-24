@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
-export async function GET(request: NextRequest) {
-  const path = request.nextUrl.searchParams.get("path") || "/";
+export async function GET(req: NextRequest) {
+  const { searchParams } = req.nextUrl;
+  const path = searchParams.get("path") || "/";
+  const result = { path, revalidated: true };
+
   try {
     revalidatePath(path);
-    return NextResponse.json({ path, revalidated: true });
   } catch (err) {
+    result.revalidated = false;
     console.log(err);
-    return NextResponse.json({ message: "Error revalidation", path });
+  } finally {
+    return NextResponse.json(result);
   }
 }
