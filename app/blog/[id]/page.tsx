@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getDate } from "@/lib";
 
 // export const dynamic = "force-static";
@@ -13,6 +14,10 @@ export default async function Page({ params: { id } }: { params: { id: string } 
       </p>
       <p>
         <a href={`/api/revalidate?path=/blog/${id}`}>Revalidate with res.revalidate</a>
+      </p>
+      <hr />
+      <p>
+        <Link href={"/"}>To the top</Link>
       </p>
     </>
   );
