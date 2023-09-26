@@ -3,29 +3,63 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <p>
-        <Link href={"/blog/test"}>Go to /blog/test with &lt;Link&gt;</Link>
-      </p>
-      <p>
-        <Link href={"/blog/test2"}>Go to /blog/test2 with &lt;Link&gt;</Link>
-      </p>
-      <p>
-        <Link href={"/blog/test3"}>Go to /blog/test3 with &lt;Link&gt;</Link>
-      </p>
+      <div>
+        statically generated with <code>generateStaticParams</code>
+      </div>
+      <ul>
+        <li>
+          <Link href={"/blog/static1"}>
+            Go to <code>/blog/static1</code> through <code>&lt;Link&gt;</code>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/blog/static2"}>
+            Go to <code>/blog/static2</code> through <code>&lt;Link&gt;</code>
+          </Link>
+        </li>
+      </ul>
+      <div>dynamically generated at request time</div>
+      <ul>
+        <li>
+          <Link href={"/blog/dynamic1"}>
+            Go to <code>/blog/dynamic1</code> through <code>&lt;Link&gt;</code>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/blog/dynamic2"}>
+            Go to <code>/blog/dynamic2</code> through <code>&lt;Link&gt;</code>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/blog/dynamic3"}>
+            Go to <code>/blog/dynamic3</code> through <code>&lt;Link&gt;</code>
+          </Link>
+        </li>
+      </ul>
+      <div>dynamically generated at request time</div>
+      <ul>
+        <li>
+          <a href={"/blog/dynamic4"}>
+            Go to <code>/blog/dynamic4</code> through <code>&lt;a&gt;</code>
+          </a>
+        </li>
+        <li>
+          <a href={"/blog/dynamic5"}>
+            Go to <code>/blog/dynamic5</code> through <code>&lt;a&gt;</code>
+          </a>
+        </li>
+        <li>
+          <a href={"/blog/dynamic6"}>
+            Go to <code>/blog/dynamic6</code> through <code>&lt;a&gt;</code>
+          </a>
+        </li>
+      </ul>
       <hr />
-      <p>
-        <a href={"/blog/test4"}>Go to /blog/test4 with &lt;a&gt;</a>
-      </p>
-      <p>
-        <a href={"/blog/test5"}>Go to /blog/test5 with &lt;a&gt;</a>
-      </p>
-      <p>
-        <a href={"/blog/test6"}>Go to /blog/test6 with &lt;a&gt;</a>
-      </p>
-      <hr />
-      <p>
-        <Link href={"/blog"}>Go to /blog (static page)</Link>
-      </p>
+      <div>
+        <Link href={"/blog"}>
+          Go to <code>/blog</code> (static page)
+        </Link>
+      </div>
     </>
   );
 }

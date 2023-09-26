@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "rm -rf .next && next build && next start"
   },
   "dependencies": {
     "next": "^13.5.3",
