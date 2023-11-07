@@ -16,10 +16,6 @@ export default function Page() {
           Revalidate with <code>res.revalidate</code>
         </a>
       </p>
-      <hr />
-      <p>
-        <Link href={"/"}>To the top</Link>
-      </p>
     </>
   );
 }

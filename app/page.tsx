@@ -54,7 +54,6 @@ export default function Home() {
           </a>
         </li>
       </ul>
-      <hr />
       <div>
         <Link href={"/blog"}>
           Go to <code>/blog</code> (static page)
