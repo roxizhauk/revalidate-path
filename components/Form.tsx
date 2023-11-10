@@ -11,21 +11,20 @@ export default function Form() {
   const handleFromAction = async (formData: FormData) => {
     const path = formData.get("path") as string | null;
     if (path) {
-      const completePath = "/blog/" + path;
-      await updateRoute(completePath);
+      await updateRoute(path);
       setResult(
         <div>
           <div>
             You successfully did <code>revalidatePath</code>!
           </div>
           <Link
-            href={completePath}
+            href={path}
             onClick={() => {
               formRef.current?.reset();
               setResult(undefined);
             }}
           >
-            Go to <code>{completePath}</code>
+            Go to <code>{path}</code>
           </Link>
         </div>
       );
@@ -39,7 +38,7 @@ export default function Form() {
       <div>You can also use Server Action to revalidate here.</div>
       <form ref={formRef}>
         /blog/
-        <input type="text" name="path" required placeholder="ex) dynamic1" />
+        <input type="text" name="path" required placeholder="ex) /blog/dynamic1" />
         <button type="submit" formAction={handleFromAction}>
           Update Route
         </button>

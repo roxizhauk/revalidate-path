@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getDate } from "@/lib";
 
 // export const dynamic = "force-static";
