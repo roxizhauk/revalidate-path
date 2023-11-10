@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef } from "react";
-import { updateRoute } from "@/lib/actions";
+import { updateRoute } from "./actions";
 
 export default function Form() {
   const [result, setResult] = useState<React.ReactNode>();
@@ -37,7 +37,6 @@ export default function Form() {
     <>
       <div>You can also use Server Action to revalidate here.</div>
       <form ref={formRef}>
-        /blog/
         <input type="text" name="path" required placeholder="ex) /blog/dynamic1" />
         <button type="submit" formAction={handleFromAction}>
           Update Route

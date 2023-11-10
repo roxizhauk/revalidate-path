@@ -1,10 +1,11 @@
-import { getDate } from "@/lib";
+import Datetime from "@/components/Datetime";
 
 export default function Page() {
+  const datetime = new Date().toISOString();
   return (
     <>
       <p>/blog</p>
-      <p>{getDate()}</p>
+      <Datetime datetime={datetime} />
       <p>
         <a href={`/api/revalidate-path?path=/blog`}>
           Revalidate with <code>revalidatePath</code>

@@ -48,11 +48,6 @@ export default function Home() {
             Go to <code>/blog/dynamic5</code> through <code>&lt;a&gt;</code>
           </a>
         </li>
-        <li>
-          <a href={"/blog/dynamic6"}>
-            Go to <code>/blog/dynamic6</code> through <code>&lt;a&gt;</code>
-          </a>
-        </li>
       </ul>
       <div>
         <Link href={"/blog"}>

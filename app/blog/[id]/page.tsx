@@ -1,13 +1,14 @@
-import { getDate } from "@/lib";
+import Datetime from "@/components/Datetime";
 
 // export const dynamic = "force-static";
 export const generateStaticParams = () => [{ id: "static1" }, { id: "static2" }];
 
 export default async function Page({ params: { id } }: { params: { id: string } }) {
+  const datetime = new Date().toISOString();
   return (
     <>
       <p>id: {id}</p>
-      <p>{getDate()}</p>
+      <Datetime datetime={datetime} />
       <p>
         <a href={`/api/revalidate-path?path=/blog/${id}`}>
           Revalidate with <code>revalidatePath</code>
