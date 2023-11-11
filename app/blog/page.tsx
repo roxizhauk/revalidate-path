@@ -1,4 +1,5 @@
 import Datetime from "@/components/Datetime";
+import Form from "@/components/form";
 
 export default function Page() {
   const datetime = new Date().toISOString();
@@ -16,6 +17,7 @@ export default function Page() {
           Revalidate with <code>res.revalidate</code>
         </a>
       </p>
+      <Form path={"/blog"} />
     </>
   );
 }

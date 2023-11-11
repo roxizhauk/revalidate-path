@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Form from "@/components/form";
 
 export default function RootLayout({ children }) {
   return (
@@ -7,9 +6,6 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         {children}
-        <hr />
-        <Form />
-        <hr />
         <p>
           <Link href={"/"} prefetch={false}>
             Back to the top
