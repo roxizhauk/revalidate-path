@@ -7,9 +7,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <p>
-          <Link href={"/"} prefetch={false}>
-            Back to the top
-          </Link>
+          <Link href={"/"}>Back to top</Link>
         </p>
       </body>
     </html>
